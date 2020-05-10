@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skynet.dipper.commons.mapper.FriendTypeMapper">
+  <resultMap id="BaseResultMap" type="com.skynet.dipper.commons.domain.FriendType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="build_time" jdbcType="TIMESTAMP" property="buildTime" />
+    <result column="is_default" jdbcType="INTEGER" property="isDefault" />
+  </resultMap>
+</mapper>
