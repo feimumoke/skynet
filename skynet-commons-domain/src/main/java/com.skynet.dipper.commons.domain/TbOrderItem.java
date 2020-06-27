@@ -2,7 +2,7 @@ package com.skynet.dipper.commons.domain;
 
 import javax.persistence.*;
 
-@Table(name = "Dubhe..tb_order_item")
+@Table(name = "Dubhe.tb_order_item")
 public class TbOrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

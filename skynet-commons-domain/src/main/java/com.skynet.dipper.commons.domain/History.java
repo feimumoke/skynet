@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..history")
+@Table(name = "Dubhe.history")
 public class History {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

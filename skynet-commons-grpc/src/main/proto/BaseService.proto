@@ -1,11 +1,11 @@
 syntax = "proto3";
 import "google/protobuf/any.proto";
-import "UserService.proto";
 
-package com.skynet.commons.grpc.dipper.proto;
 
-option java_package = "com.skynet.commons.grpc.dipper.proto";
-option java_outer_classname = "DipperService";
+package com.skynet.dipper.commons.grpc.base;
+
+option java_package = "com.skynet.dipper.commons.grpc.base";
+option java_outer_classname = "BaseServiceProto";
 option java_multiple_files = true;
 
 service BaseService {
@@ -28,6 +28,8 @@ enum MessageType{
     GROUP_USER= 4;
     USER = 5;
     GROUP_MESSAGE = 6;
+    BLOG = 7;
+    BLOG_MESSAGE = 8;
 }
 message RpcResult {
     int32 rpc_code = 1;

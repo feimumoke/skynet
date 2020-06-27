@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..tb_item_param")
+@Table(name = "Dubhe.tb_item_param")
 public class TbItemParam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

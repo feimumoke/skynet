@@ -75,7 +75,7 @@
     this.$input.attr('name', this.name)
 
     var file = files[0]
-
+    console.log(file);
     if (this.$preview.length > 0 && (typeof file.type !== "undefined" ? file.type.match(/^image\/(gif|png|jpeg)$/) : file.name.match(/\.(gif|png|jpe?g)$/i)) && typeof FileReader !== "undefined") {
       var reader = new FileReader()
       var preview = this.$preview
@@ -95,8 +95,18 @@
         element.addClass('fileinput-exists').removeClass('fileinput-new')
 
         element.trigger('change.bs.fileinput', files)
-      }
-
+      };
+      var formData = new FormData();
+      formData.append('file', file);
+      $.ajax({
+        url: '/user/avatar/upload',
+        type: 'POST',
+        cache: false,
+        data: formData,
+        processData: false,
+        contentType: false
+      }).done(function(res) {
+      }).fail(function(res) {});
       reader.readAsDataURL(file)
     } else {
       this.$element.find('.fileinput-filename').text(file.name)
@@ -163,7 +173,9 @@
     return this.each(function () {
       var $this = $(this),
           data = $this.data('bs.fileinput')
+      console.log("fileinput");
       if (!data) $this.data('bs.fileinput', (data = new Fileinput(this, options)))
+      console.log(data);
       if (typeof options == 'string') data[options]()
     })
   }
@@ -189,6 +201,7 @@
     $this.fileinput($this.data())
       
     var $target = $(e.target).closest('[data-dismiss="fileinput"],[data-trigger="fileinput"]');
+    alert($target)
     if ($target.length > 0) {
       e.preventDefault()
       $target.trigger('click.bs.fileinput')

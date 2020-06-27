@@ -2,7 +2,7 @@ package com.skynet.dipper.commons.domain;
 
 import javax.persistence.*;
 
-@Table(name = "Dubhe..friends")
+@Table(name = "Dubhe.friends")
 public class Friends {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

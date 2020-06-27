@@ -31,23 +31,69 @@
         <cloud-hystrix.version>2.0.1.RELEASE</cloud-hystrix.version>
 
         <!-- Commons Settings -->
+        <grpc.version>1.25.0</grpc.version>
+        <protobuf.version>3.10.0</protobuf.version>
+        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <spring-cloud.version>Finchley.SR4</spring-cloud.version>
+        <dubbo.version>2.7.6</dubbo.version>
+        <grpc.tcnative.version>2.0.20.Final</grpc.tcnative.version>
         <kyro.version>0.42</kyro.version>
         <mysql.version>8.0.12</mysql.version>
         <fastdfs.version>1.27</fastdfs.version>
+        <dubbo.compiler.version>0.0.1</dubbo.compiler.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!-- Spring Boot Starter Begin -->
+            <!-- Spring Boot -->
             <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${boot-dubbo.version}</version>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>dubbo-spring-boot-actuator</artifactId>
-                <version>${boot-dubbo.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Apache Dubbo  -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
             <dependency>
                 <groupId>tk.mybatis</groupId>
@@ -64,6 +110,48 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${boot-druid.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java-util</artifactId>
+                <version>${protobuf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty</artifactId>
+                <version>${grpc.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.grpc</groupId>
+                        <artifactId>grpc-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-core</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty-shaded</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+
             <!-- Spring Boot Starter End -->
 
             <!-- Spring Cloud Begin -->
@@ -90,6 +178,8 @@
                 <artifactId>fastdfs-client-java</artifactId>
                 <version>${fastdfs.version}</version>
             </dependency>
+
+
             <!-- Commons End -->
         </dependencies>
     </dependencyManagement>
@@ -212,18 +302,18 @@
         <!-- 资源文件配置 -->
         <resources>
             <resource>
-                <directory>../skynet-service-user-provider/src/main/java</directory>
+                <directory>src/main/java</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
             </resource>
             <resource>
-                <directory>../skynet-service-user-provider/src/main/resources</directory>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
     </build>
 
-    <repositories>
+   <!-- <repositories>
         <repository>
             <id>aliyun-repos</id>
             <name>Aliyun Repository</name>
@@ -258,7 +348,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 
     <pluginRepositories>
         <pluginRepository>

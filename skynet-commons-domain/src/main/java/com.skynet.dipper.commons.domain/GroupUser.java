@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..group_user")
+@Table(name = "Dubhe.group_user")
 public class GroupUser {
     /**
      * 自增主键

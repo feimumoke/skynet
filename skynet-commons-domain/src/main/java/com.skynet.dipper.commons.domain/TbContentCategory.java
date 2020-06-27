@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..tb_content_category")
+@Table(name = "Dubhe.tb_content_category")
 public class TbContentCategory {
     /**
      * 类目ID

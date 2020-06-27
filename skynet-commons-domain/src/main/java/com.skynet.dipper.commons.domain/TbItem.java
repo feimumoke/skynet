@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..tb_item")
+@Table(name = "Dubhe.tb_item")
 public class TbItem {
     /**
      * 商品id，同时也是商品编号

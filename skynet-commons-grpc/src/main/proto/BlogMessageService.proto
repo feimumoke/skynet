@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package com.skynet.commons.grpc.dipper.proto;
+package com.skynet.dipper.commons.grpc.blog;
 
-option java_package = "com.skynet.commons.grpc.dipper.proto";
+option java_package = "com.skynet.dipper.commons.grpc.blog";
 option java_outer_classname = "BlogMessageProto";
 option java_multiple_files = true;
 

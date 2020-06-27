@@ -1,7 +1,10 @@
 package com.skynet.dipper.commons.mapper;
 
 import com.skynet.dipper.commons.domain.TBlog;
-import tk.mybatis.mapper.MyMapper;
 
+import org.springframework.stereotype.Repository;
+
+import tk.mybatis.mapper.MyMapper;
+@Repository
 public interface TBlogMapper extends MyMapper<TBlog> {
 }

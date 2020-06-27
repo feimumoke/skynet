@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Table(name = "Dubhe..tb_order")
+@Table(name = "Dubhe.tb_order")
 public class TbOrder {
     /**
      * 订单id

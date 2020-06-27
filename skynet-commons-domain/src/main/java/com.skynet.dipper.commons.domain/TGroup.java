@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..t_group")
+@Table(name = "Dubhe.t_group")
 public class TGroup {
     /**
      * 自增主键

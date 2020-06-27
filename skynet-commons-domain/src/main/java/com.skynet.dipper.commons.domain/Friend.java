@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..friend")
+@Table(name = "Dubhe.friend")
 public class Friend {
     /**
      * 自增主键

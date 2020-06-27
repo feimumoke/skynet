@@ -3,7 +3,7 @@ package com.skynet.dipper.commons.domain;
 import javax.persistence.*;
 import java.util.Date;
 
-@Table(name = "Dubhe..blog_message")
+@Table(name = "Dubhe.blog_message")
 public class BlogMessage {
     /**
      * 自增主键

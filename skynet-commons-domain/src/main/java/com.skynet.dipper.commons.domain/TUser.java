@@ -2,7 +2,7 @@ package com.skynet.dipper.commons.domain;
 
 import javax.persistence.*;
 
-@Table(name = "Dubhe..t_user")
+@Table(name = "Dubhe.t_user")
 public class TUser {
     /**
      * 自增主键
