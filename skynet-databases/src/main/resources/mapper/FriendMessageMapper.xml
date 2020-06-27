@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skynet.dipper.commons.mapper.FriendMessageMapper">
+  <resultMap id="BaseResultMap" type="com.skynet.dipper.commons.domain.FriendMessage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="from_user_id" jdbcType="INTEGER" property="fromUserId" />
+    <result column="to_user_id" jdbcType="INTEGER" property="toUserId" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="send_time" jdbcType="TIMESTAMP" property="sendTime" />
+    <result column="is_read" jdbcType="INTEGER" property="isRead" />
+    <result column="is_del" jdbcType="INTEGER" property="isDel" />
+    <result column="is_back" jdbcType="INTEGER" property="isBack" />
+  </resultMap>
+</mapper>

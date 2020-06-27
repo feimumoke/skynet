@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: skynet-api-gateway
+
+server:
+  port: 8001

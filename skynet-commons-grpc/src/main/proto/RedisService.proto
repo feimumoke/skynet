@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package com.skynet.dipper.commons.grpc.redis;
+
+option java_package = "com.skynet.dipper.commons.grpc.redis";
+option java_outer_classname = "RedisProto";
+option java_multiple_files = true;
+
+service RedisService {
+    rpc exist (RKey) returns (IsOK) {
+    }
+    rpc setIfAbsent (RPair) returns (IsOK) {
+    }
+    rpc get (RKey) returns (Result) {
+    }
+    rpc set (RPair) returns (Empty) {
+    }
+    rpc delete (RKey) returns (IsOK) {
+    }
+}
+
+message RKey {
+    string key = 1;
+}
+
+message RPair {
+    string key = 1;
+    string value = 2;
+}
+
+message Result {
+    string value = 1;
+}
+
+message IsOK {
+    bool ok = 1;
+}
+
+message Empty {
+
+}

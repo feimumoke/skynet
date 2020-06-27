@@ -1,0 +1,84 @@
+# Spring boot application
+spring:
+  application:
+    name: skynet-service-chat-provider
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3333/Dubhe?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+      username: root
+      password: tiger
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8701
+
+# MyBatis Config properties
+mybatis:
+  configuration:
+    cache-enabled: true
+  type-aliases-package: com.skynet.dipper.commons.domain
+  mapper-locations: classpath:mapper/*.xml
+
+# Services Versions
+services:
+  versions:
+    redis:
+      v1: 1.0.0
+    chat:
+      v1: 1.0.0
+
+# Dubbo Config properties
+dubbo:
+  ## Base packages to scan Dubbo Componentï¼š@com.alibaba.dubbo.config.annotation.Service
+  scan:
+    basePackages: com.skynet.dipper.service.chat.provider.api.impl
+  ## ApplicationConfig Bean
+  application:
+    id: skynet-service-chat-provider
+    name: skynet-service-chat-provider
+    qos-port: -1
+    qos-enable: true
+  ## ProtocolConfig Bean
+  protocol:
+    id: grpc
+    name: grpc
+    port: 20882
+    status: server
+  ## RegistryConfig Bean
+
+  registry:
+    id: zookeeper
+    address: zookeeper://127.0.0.1:2181
+
+
+image:
+  server: http://localhost:9701/dipper/fs/
+
+# Enables Dubbo All Endpoints
+management:
+  endpoint:
+    dubbo:
+      enabled: true
+    dubbo-shutdown:
+      enabled: true
+    dubbo-configs:
+      enabled: true
+    dubbo-services:
+      enabled: true
+    dubbo-references:
+      enabled: true
+    dubbo-properties:
+      enabled: true
+  # Dubbo Health
+  health:
+    dubbo:
+      status:
+        ## StatusChecker Name defaults (default : "memory", "load" )
+        defaults: memory
+        ## StatusChecker Name extras (default : empty )
+        extras: load,threadpool
+
+

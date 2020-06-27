@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: 4.7.5
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Metronic Admin Theme #1 | New User Profile | Account</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Preview page of Metronic Admin Theme #1 for user account page" name="description"/>
+    <meta content="" name="author"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
+          type="text/css"/>
+    <link href="/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet"
+          type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/assets/global/css/components-rounded.min.css" rel="stylesheet" id="style_components"
+          type="text/css"/>
+    <link href="/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="/assets/pages/css/profile.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="/assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/layouts/layout4/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<!-- END HEAD -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-content-white page-sidebar-closed">
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- BEGIN PROFILE SIDEBAR -->
+            <div class="profile-sidebar">
+                <!-- PORTLET MAIN -->
+                <div class="portlet light profile-sidebar-portlet ">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <img src="/assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""></div>
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <div class="profile-usertitle-name" th:text="${user.userName}"> </div>
+                        <div class="profile-usertitle-job" th:text="${user.nickName}"> </div>
+                    </div>
+                    <!-- END SIDEBAR USER TITLE -->
+                    <!-- SIDEBAR BUTTONS -->
+                    <div class="profile-userbuttons">
+                        <button type="button" class="btn btn-circle green btn-sm">添加关注</button>
+                        <button type="button" class="btn btn-circle red btn-sm">发送信息</button>
+                    </div>
+                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- SIDEBAR MENU -->
+                    <div class="profile-usermenu">
+                    </div>
+                    <!-- END MENU -->
+                </div>
+                <!-- END PORTLET MAIN -->
+                <!-- PORTLET MAIN -->
+                <div class="portlet light ">
+                    <!-- STAT -->
+                    <div class="row list-separated profile-stat">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 137</div>
+                            <div class="uppercase profile-stat-text"> 好友</div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 21</div>
+                            <div class="uppercase profile-stat-text"> 群组</div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="uppercase profile-stat-title"> 61</div>
+                            <div class="uppercase profile-stat-text"> 博客</div>
+                        </div>
+                    </div>
+                    <!-- END STAT -->
+                    <div>
+                        <h4 class="profile-desc-title">关于<p th:text="${user.userName}"></p></h4>
+                        <span class="profile-desc-text"> 连接信息 </span>
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-globe"></i>
+                            <a href="http://www.keenthemes.com">www.keenthemes.com</a>
+                        </div>
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-twitter"></i>
+                            <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
+                        </div>
+                        <div class="margin-top-20 profile-desc-link">
+                            <i class="fa fa-facebook"></i>
+                            <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PORTLET MAIN -->
+            </div>
+            <!-- END BEGIN PROFILE SIDEBAR -->
+            <!-- BEGIN PROFILE CONTENT -->
+            <div class="profile-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portlet light ">
+                            <div class="portlet-title tabbable-line">
+                                <div class="caption caption-md">
+                                    <i class="icon-globe theme-font hide"></i>
+                                    <span class="caption-subject font-blue-madison bold uppercase">用户信息</span>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#tab_1_1" data-toggle="tab">基本信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_1_2" data-toggle="tab">更换头像</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_1_3" data-toggle="tab">更换密码</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab_1_4" data-toggle="tab">隐私设置</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="portlet-body">
+                                <div class="tab-content">
+                                    <!-- PERSONAL INFO TAB -->
+                                    <div class="tab-pane active" id="tab_1_1">
+                                        <form role="form" action="#">
+                                            <div class="form-group">
+                                                <label class="control-label">名字</label>
+                                                <input type="text" th:placeholder="${user.userName}" class="form-control"/></div>
+                                            <div class="form-group">
+                                                <label class="control-label">昵称</label>
+                                                <input type="text" th:placeholder="${user.nickName}" class="form-control"/></div>
+                                            <div class="form-group">
+                                                <label class="control-label">住址</label>
+                                                <input type="text" th:placeholder="${user.email}"
+                                                       class="form-control"/></div>
+                                            <div class="form-group">
+                                                <label class="control-label">神兵</label>
+                                                <input type="text" th:placeholder="${user.phone}" class="form-control"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">格言</label>
+                                                <textarea class="form-control" rows="3"
+                                                          th:placeholder="${user.sign}"></textarea>
+                                            </div>
+                                            <div class="margiv-top-10">
+                                                <a href="javascript:;" class="btn green"> 保存修改 </a>
+                                                <a href="javascript:;" class="btn default"> 取消 </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- END PERSONAL INFO TAB -->
+                                    <!-- CHANGE AVATAR TAB -->
+                                    <div class="tab-pane" id="tab_1_2">
+                                        <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                                            dolor brunch. Food truck quinoa nesciunt laborum
+                                            eiusmod. </p>
+                                        <form action="#" role="form">
+                                            <div class="form-group">
+                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <div class="fileinput-new thumbnail"
+                                                         style="width: 200px; height: 150px;">
+                                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"
+                                                             alt=""/></div>
+                                                    <div class="fileinput-preview fileinput-exists thumbnail"
+                                                         style="max-width: 200px; max-height: 150px;"></div>
+                                                    <div>
+                                                                            <span class="btn default btn-file">
+                                                                                <span class="fileinput-new"> Select image </span>
+                                                                                <span class="fileinput-exists"> Change </span>
+                                                                                <input type="file"  name="uploadImage" id="uploadImage"> </span>
+                                                        <a href="javascript:;" class="btn default fileinput-exists"
+                                                           data-dismiss="fileinput"> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- END CHANGE AVATAR TAB -->
+                                    <!-- CHANGE PASSWORD TAB -->
+                                    <div class="tab-pane" id="tab_1_3">
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <label class="control-label">Current Password</label>
+                                                <input type="password" class="form-control"/></div>
+                                            <div class="form-group">
+                                                <label class="control-label">New Password</label>
+                                                <input type="password" class="form-control"/></div>
+                                            <div class="form-group">
+                                                <label class="control-label">Re-type New Password</label>
+                                                <input type="password" class="form-control"/></div>
+                                            <div class="margin-top-10">
+                                                <a href="javascript:;" class="btn green"> Change Password </a>
+                                                <a href="javascript:;" class="btn default"> Cancel </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- END CHANGE PASSWORD TAB -->
+                                    <!-- PRIVACY SETTINGS TAB -->
+                                    <div class="tab-pane" id="tab_1_4">
+                                        <form action="#">
+                                            <table class="table table-light table-hover">
+                                                <tr>
+                                                    <td> Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus..
+                                                    </td>
+                                                    <td>
+                                                        <div class="mt-radio-inline">
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios1"
+                                                                       value="option1"/> Yes
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios1"
+                                                                       value="option2" checked/> No
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Enim eiusmod high life accusamus terry richardson ad squid wolf
+                                                        moon
+                                                    </td>
+                                                    <td>
+                                                        <div class="mt-radio-inline">
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios11"
+                                                                       value="option1"/> Yes
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios11"
+                                                                       value="option2" checked/> No
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Enim eiusmod high life accusamus terry richardson ad squid wolf
+                                                        moon
+                                                    </td>
+                                                    <td>
+                                                        <div class="mt-radio-inline">
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios21"
+                                                                       value="option1"/> Yes
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios21"
+                                                                       value="option2" checked/> No
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> Enim eiusmod high life accusamus terry richardson ad squid wolf
+                                                        moon
+                                                    </td>
+                                                    <td>
+                                                        <div class="mt-radio-inline">
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios31"
+                                                                       value="option1"/> Yes
+                                                                <span></span>
+                                                            </label>
+                                                            <label class="mt-radio">
+                                                                <input type="radio" name="optionsRadios31"
+                                                                       value="option2" checked/> No
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!--end profile-settings-->
+                                            <div class="margin-top-10">
+                                                <a href="javascript:;" class="btn red"> Save Changes </a>
+                                                <a href="javascript:;" class="btn default"> Cancel </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- END PRIVACY SETTINGS TAB -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PROFILE CONTENT -->
+        </div>
+    </div>
+</div>
+<!-- END CONTENT -->
+
+<!-- END QUICK NAV -->
+<!--[if lt IE 9]>
+<script src="/assets/global/plugins/respond.min.js"></script>
+<script src="/assets/global/plugins/excanvas.min.js"></script>
+<script src="/assets/global/plugins/ie8.fix.min.js"></script>
+<![endif]-->
+<!-- BEGIN CORE PLUGINS -->
+<script src="/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+<script src="/assets/global/scripts/app.min.js" type="text/javascript"></script>
+<!-- END THEME GLOBAL SCRIPTS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="/assets/pages/scripts/profile.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="/assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
+<script src="/assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
+<script src="/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+<script src="/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+<script>
+    $(function () {
+
+    });
+   /** $("#uploadImage").fileinput({
+        uploadUrl : "/user/avatar/upload",
+        dataType : 'json',
+        enctype: 'multipart/form-data',
+        acceptFileTypes : /(gif|jpe?g|png)$/i,
+        maxFileSize : 10000000, // 1 MB
+        imageMaxWidth : 10000,
+        imageMaxHeight : 10000,
+        messages : {
+            acceptFileTypes : '文件类型不匹配',
+            maxFileSize : '文件过大',
+            minFileSize : '文件过小'
+        }
+    }).on("fileuploadadd", function(e, data) {
+        // 当文件添加上去时候调用
+        data.submit()
+    }).on("fileuploaddone", function(e, data) {
+        // 上传完成时调用
+        if (data.result.returnState == "ERROR") {
+            alert("上传失败");
+            return;
+        }
+        url = data.result.returnData.url;
+        console.log(url)
+    });
+*/
+
+
+</script>
+</body>
+
+</html>

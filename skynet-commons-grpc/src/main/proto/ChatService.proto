@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package com.skynet.dipper.commons.grpc.chat;
+
+option java_package = "com.skynet.dipper.commons.grpc.chat";
+option java_outer_classname = "ChatProto";
+option java_multiple_files = true;
+
+service ChatService {
+    rpc init (UserId) returns (MVInit) {
+    }
+
+}
+
+message UserId {
+    int32 id = 1;
+}
+
+message MVUser {
+    int32 id = 1;
+    string username = 2;
+    string status = 3;
+    string sign = 4;
+    string avatar = 5;
+}
+
+message MVFriend {
+    string groupname = 1;
+    int32 id = 2;
+    int32 online = 3;
+    repeated MVUser list = 4;
+}
+
+message MVGroup {
+    int32 id = 1;
+    string groupname = 2;
+    string avatar = 3;
+}
+
+message MVData {
+    MVUser mine = 1;
+    repeated MVFriend friend = 2;
+    repeated MVGroup group = 3;
+}
+
+message MVInit {
+    int32 id = 1;
+    string msg = 2; // 失败信息,成功则为空
+    MVData data = 3;
+}
