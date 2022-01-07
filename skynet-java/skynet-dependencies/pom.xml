@@ -32,7 +32,7 @@
 
         <!-- Commons Settings -->
         <grpc.version>1.25.0</grpc.version>
-        <protobuf.version>3.10.0</protobuf.version>
+        <protobuf.version>3.16.1</protobuf.version>
         <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR4</spring-cloud.version>
         <dubbo.version>2.7.6</dubbo.version>
